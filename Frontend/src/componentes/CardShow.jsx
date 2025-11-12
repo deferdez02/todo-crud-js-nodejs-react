@@ -4,15 +4,15 @@ function CardShow() {
       <div className="card w-75">
         <div className="card-body d-flex gap-2 ">
           <input
-            className="form-check-input"
+            className="form-check-input ms-2"
             type="radio"
             name="radioDefault"
             id="radioDefault1"
           ></input>
-          This is some text within a card body.
-          <button type="button" className="btn btn-dark  ms-auto">
-            Dark
-          </button>
+          Sacar la basura
+          <div className="ms-auto ">
+            <i className="bi bi-star text-secondary"></i>
+          </div>
         </div>
       </div>
     </div>

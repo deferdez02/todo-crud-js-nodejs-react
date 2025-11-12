@@ -1,16 +1,6 @@
-import Navbar from "./componentes/navbar";
-import Toolbar from "./componentes/toolbar";
-import Card from "./componentes/CardCreate";
-import CardShow from "./componentes/CardShow";
+import Home from "./pages/Home";
+
 function App() {
-  return (
-    <div>
-      {" "}
-      <Navbar />
-      <Toolbar />
-      <Card />
-      <CardShow />{" "}
-    </div>
-  );
+  return <Home />;
 }
 export default App;
