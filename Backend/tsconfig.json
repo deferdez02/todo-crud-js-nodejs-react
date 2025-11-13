@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-   "rootDir": "./src",
+    "rootDir": "./src",
     "outDir": "./dist",
     "module": "commonjs",
     "target": "ES2016",
     "esModuleInterop": true,
     "strict": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/Api/taskRoutes.tss.ts"],
   "exclude": ["node_modules"]
 }

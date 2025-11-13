@@ -1,9 +1,16 @@
 import express, { Request, Response } from "express";
+import tasksRoutes from "./Api/taskRoutes";
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/", (req: Request, res: Response) => {
-  res.send("arranco vamoo");
+  res.send("Servidor funcionando correctamente");
 });
 
-export default app; 
+app.use("/api/tasks", tasksRoutes);
+
+
+
+export default app;  
