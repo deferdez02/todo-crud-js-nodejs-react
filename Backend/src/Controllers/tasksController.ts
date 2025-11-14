@@ -1,9 +1,7 @@
 import { Request, Response } from "express";
 import {Task} from "../Interface/task";
 import {v4 as uuidv4} from "uuid";
-
-let tasks: Task[]=[];
-
+import { tasks } from "../Api/taskRoutes";
 
 export const getTasks = (req: Request, res:Response) => {
         
@@ -14,15 +12,15 @@ export const getTasks = (req: Request, res:Response) => {
 export const PostTask = (req: Request, res:Response) => {
     const {title,description, createdAt} = req.body;
     
-     if(!title || !description){
+     if(!title ){
         return res.status(404).json({
-            msg:"faltan campos"
+            msg:"falta titulo"
         })
     }
     const newTask: Task = {
         id: uuidv4(),
         title,
-        description,
+        description: description || "",
         completed: false,
         createdAt: new Date()
     }
@@ -31,7 +29,7 @@ export const PostTask = (req: Request, res:Response) => {
         msg:"tarea creada",
         task: newTask
     })
-
+console.log("POST recibido:", req.body);
 }
 
 export const PutTask = (req: Request, res:Response) => {
